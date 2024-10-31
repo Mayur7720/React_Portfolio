@@ -1,0 +1,47 @@
+.hero-section-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    background-position: 0%, 50%;
+  }
+  50% {
+    background-position: 100%, 50%;
+  }
+}
+
+.grid-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  z-index: 0;
+  opacity: 0.4;
+  animation: wave 4s ease infinite;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    rgba(255, 0, 0, 1)
+  );
+  background-size: 200% 200%;
+}
+
+.grid-net {
+  width: 100%;
+  height: 100%;
+  /* border: 1px dashed #ccc; */
+  border: 1px dashed #064e3b;
+}
+
+.grid-net:hover {
+  border-color: #10b981; /* Emerald color */
+  box-shadow: 0 0 15px 5px rgba(16, 185, 129, 4); /* Glow effect */
+}

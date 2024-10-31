@@ -1,0 +1,40 @@
+.logo-font {
+  font-weight: 900;
+  font-family: "Times New Roman", Times, serif;
+  -webkit-text-fill-color: transparent; 
+  -webkit-background-clip: text; 
+  background-clip: text;
+  animation: fontChange 5s ease infinite;
+  background-size: 200% 200%;
+  /* background-image: linear-gradient(
+    90deg,
+    hsla(333, 100%, 53%, 1) 0%,
+    hsla(33, 94%, 57%, 1) 100%
+  ); */
+  z-index: 100;
+}
+
+@keyframes fontChange {
+  0%,
+  100% {
+    background-position: 0%, 50%;
+  }
+  50% {
+    background-position: 100%, 50%;
+  }
+}
+
+@keyframes animate-gradient {
+  0%,
+  100% {
+    background-position: 0%, 50%;
+  }
+  50% {
+    background-position: 100%, 50%;
+  }
+}
+
+.animate-div {
+  animation: animate-gradient 5s ease infinite;
+  background-size: 200% 200%;
+}
