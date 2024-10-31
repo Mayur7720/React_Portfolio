@@ -7,7 +7,7 @@ function Button({
   color = " bg-emerald-800",
   ...rest
 }) {
-  console.log(href);
+
   return (
 
       <a

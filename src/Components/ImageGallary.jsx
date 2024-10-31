@@ -1,34 +1,68 @@
 import React, { useState } from "react";
-import pic from "../assets/screen2.png";
+import ReactDOM from "react-dom";
+
 function ImageGallary({ screenShots }) {
-  const [screenShot, setScreenShot] = useState(screenShots.screenShots);
+  const [screenShot] = useState(screenShots.screenShots);
+  const [showPreview, setShowPreview] = useState(false);
   const [index, setIndex] = useState(0);
 
   const handleIndex = (idx) => {
     setIndex(idx);
   };
+
+  const togglePreview = () => {
+    setShowPreview((prev) => !prev);
+  };
+
+  const renderPreview = () => {
+    return ReactDOM.createPortal(
+      <div
+        className="bg-black bg-opacity-80 backdrop-blur-md fixed inset-0 flex items-center justify-center z-50"
+        onClick={togglePreview}
+      >
+        <img
+          className="max-w-[90vw] max-h-[90vh] object-contain"
+          src={screenShot[index]}
+          alt={`Preview ${index + 1}`}
+          onClick={(e) => e.stopPropagation()}
+        />
+      </div>,
+      document.body
+    );
+  };
+
   return (
-    <div className="project-screnshots bg-transparent min-w-[25rem]">
-      <picture>
-        <img src={screenShot[index]} alt="" style={{ width: "auto" }} />
-      </picture>
-      <div className="screen-shots flex flex-wrap gap-1 mt-2 w-fit bg-gray-950">
+    <div className="relative project-screenshots overflow-hidden bg-transparent shrink-0 h-[26rem] w-[30rem]">
+      <div
+        className="w-full h-[22rem] bg-transparent cursor-pointer"
+        onClick={togglePreview}
+      >
+        <img
+          src={screenShot[index]}
+          alt={`Screenshot ${index + 1}`}
+          className="w-full h-full bg-transparent object-contain"
+        />
+      </div>
+
+      <div className="screen-shots flex gap-1 mt-2 w-fit bg-gray-950">
         {screenShot.map((el, idx) => (
           <div
             key={idx}
-            className={`screen-shot-image border-2 cursor-pointer ${
-              idx == index ? "border-red-600" : " "
-            } w-[5rem]`}
+            onClick={() => handleIndex(idx)}
+            className={`screen-shot-image h-12 overflow-hidden border-2 cursor-pointer ${
+              idx === index ? "border-red-600" : ""
+            } w-20`}
           >
             <img
-              onClick={() => handleIndex(idx)}
               src={el}
-              className="w-full object-fill"
-              alt=""
+              className="w-full h-full object-cover"
+              alt={`Thumbnail ${idx + 1}`}
             />
           </div>
         ))}
       </div>
+
+      {showPreview && renderPreview()}
     </div>
   );
 }
