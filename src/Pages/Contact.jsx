@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 import {
   RiInstagramFill,
   RiWhatsappFill,
@@ -9,27 +10,42 @@ import {
 import { MdEmail } from "react-icons/md";
 
 function Contact() {
-  const [sendForm, setSendForm] = useState(false);
+  const [sendNewForm, setSendNewForm] = useState(false);
   const [error, setError] = useState({ error: "", show: false });
   const [showEmail, setShowEmail] = useState({
     show: false,
     email: "mayurkondhare7875@gmail.com",
   });
-  const sendEmail = (e) => {
-    e.preventDefault();
-    const { value, name } = e.target;
-    setSendForm(true);
-    setTimeout(() => {
-      setSendForm(false);
-      setError((prev) => ({
-        ...prev,
-        error: "unable to send details, please try other medium",
-        show: true,
-      }));
-    }, 3000);
-    setError((prev) => ({ ...prev, error: "", show: false }));
-  };
+  const form = useRef();
 
+  const sendEmail = async (e) => {
+    e.preventDefault();
+  
+    const formData = {
+      name: form.current.user_name.value,
+      email: form.current.email.value,
+      message: form.current.message.value,
+    };
+  
+    try {
+      const response = await fetch('/.netlify/functions/sendEmail', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        console.log("Email sent successfully!");
+        setSendNewForm(false);
+      } else {
+        console.error("Failed to send email.");
+        setError({ error: "Failed to send message. Try again!", show: true });
+      }
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      setError({ error: "Failed to send message. Try again!", show: true });
+    }
+  };
+  
   const handleMouseEnter = () => {
     setShowEmail((prev) => ({ ...prev, show: true }));
     setTimeout(() => {
@@ -102,14 +118,14 @@ function Contact() {
           </div>
           <div className="bg-transparent text-center">
             <button
-              disabled={sendForm == false ? false : true}
+              disabled={sendNewForm == false ? false : true}
               className={` ${
-                !sendForm && "hover:bg-blue-700"
+                !sendNewForm && "hover:bg-blue-700"
               } hover:shadow-black/30 shadow-md shadow-black/80  mt-2 px-3 md:px-4 py-2 md:py-3 rounded-lg font-semibold ${
-                !sendForm ? "bg-blue-600" : "bg-blue-700"
+                !sendNewForm ? "bg-blue-600" : "bg-blue-700"
               }`}
             >
-              {sendForm ? " Sending... " : "Submit "}
+              {sendNewForm ? " Sending... " : "Submit "}
             </button>
           </div>
         </form>

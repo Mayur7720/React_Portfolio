@@ -1,11 +1,11 @@
 import nodejs from "./assets/nodejs.png";
-// import nodejs2 from "./assets/nodejs2.png";
+
 import react from "./assets/react.png";
-// import tailwind from "./assets/tailwind1.png";
+
 import tailwind from "./assets/tailwind2.png";
 import html from "./assets/html.png";
 import mongodb from "./assets/mongo.png";
-import visualCode from "./assets/visualCode.png";
+import visualCode from "./assets/visualcode.png";
 import mysql from "./assets/mysql.png";
 import framer from "./assets/framer.png";
 import javascript from "./assets/javascript.png";
@@ -62,7 +62,7 @@ export const projectDetails = [
       "Mongoose",
       "Mongodb",
     ],
-    screenShots: [ecommerce1, ecommerce2, ecommerce3, ecommerce4],
+    screenShots: [ecommerce1, ecommerce2, ecommerce3, ecommerce4, ecommerce5],
     link: [
       {
         github_Url: "https://github.com/Mayur7720/Ecommerce-Application",
@@ -73,10 +73,9 @@ export const projectDetails = [
 
   {
     title: "Project Manager App",
-    description:
-      " ",
+    description: " ",
     label: ["React.js", "Tailwindcss"],
-    screenShots: [task1, task2, task3,task4,task5,task6,task7,task8],
+    screenShots: [task1, task2, task3, task4, task5, task6, task7, task8],
     link: [
       {
         github_Url: "https://github.com/Mayur7720/Project_Manager",
