@@ -62,7 +62,7 @@ export const projectDetails = [
       "Mongoose",
       "Mongodb",
     ],
-    screenShots: [ecommerce1, ecommerce2, ecommerce3, ecommerce4, ecommerce5],
+    screenShots: [ecommerce1, ecommerce2, ecommerce3, ecommerce4],
     link: [
       {
         github_Url: "https://github.com/Mayur7720/Ecommerce-Application",
@@ -73,7 +73,8 @@ export const projectDetails = [
 
   {
     title: "Project Manager App",
-    description: " ",
+    description:
+      " Developed Task Management App, where application allows a superuser to create multiple tasks and assign them to individual candidates or groups and also, the superuser has the capability to update tasks as needed. Candidates can view all assigned tasks, create personal checklists, and take notes to enhance their productivity",
     label: ["React.js", "Tailwindcss"],
     screenShots: [task1, task2, task3, task4, task5, task6, task7, task8],
     link: [
@@ -86,7 +87,7 @@ export const projectDetails = [
   {
     title: "Chat Application",
     description:
-      " Lorem, ipsum dolor sit amet consectetur adipisicing elit. At quasi ipsam quod doloribus ipsum? Officiis similique quam blanditiis hic laboriosam sunt quisquam natus sint officia, sequi odit rem expedita omnis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod incidunt autem ipsum quidem perspiciatis doloremque veniam cupiditate, tempora blanditiis consectetur rem quas! Temporibus unde, eos iste a dicta doloremque assumenda.",
+      " Develped Chat Application using socket.io which help for realtime data transimission, In this project i have used for messaging, user can chat with single user as well as with group can also share files,picture to another person as well.    ",
     label: [
       "React.js",
       "Socket.io",
@@ -107,7 +108,7 @@ export const projectDetails = [
   {
     title: "Portfolio",
     description:
-      " Lorem, ipsum dolor sit amet consectetur adipisicing elit. At quasi ipsam quod doloribus ipsum? Officiis similique quam blanditiis hic laboriosam sunt quisquam natus sint officia, sequi odit rem expedita omnis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod incidunt autem ipsum quidem perspiciatis doloremque veniam cupiditate, tempora blanditiis consectetur rem quas! Temporibus unde, eos iste a dicta doloremque assumenda.",
+      "Create a portfolio application using react.js and tailwind in this portfolio i have mentioned my technical skills and personal project which i have build. ",
     label: ["React.js", "Tailwindcss"],
     screenShots: [screenshot1, screenshot2, screenshot3],
     link: [

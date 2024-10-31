@@ -57,7 +57,7 @@ function Contact() {
 
   return (
     <section className="p-2 md:p-4 bg-transparent">
-      <h1 className="text-3xl md:text-5xl px-6 py-4 font-mono font-extrabold">
+      <h1 className="text-3xl md:text-5xl md:px-6 py-4 font-mono font-extrabold">
         Contact
       </h1>
       {error.show && (
@@ -70,27 +70,27 @@ function Contact() {
           />
         </div>
       )}
-      <div className="md:mt-3 md:flex">
+      <div className="mt-3 md:flex">
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="md:w-3/5 md:px-2 py-5 mb-4 drop-shadow-md bg-gray-900/60 border border-dashed border-slate-600 transition-all ease duration-200 pb-4 rounded-xl mx-auto"
+          className="md:w-3/5 px-2 py-5 mb-4 drop-shadow-md bg-gray-900/60 border border-dashed border-slate-600 transition-all ease duration-200 pb-4 rounded-xl mx-auto"
         >
-          <div className="bg-transparent my-4 md:my-5 px-2 flex items-center justify-between">
+          <div className="bg-transparent my-5 pl-1 md:px-2 flex items-center justify-between">
             <label
-              className="bg-transparent text-xl md:text-xl font-mono font-semibold"
+              className="bg-transparent text-lg md:text-xl font-mono font-semibold"
               htmlFor="user_name"
             >
               Name
             </label>
             <input
-              className="p-2 md:p-3 w-2/3 md:text-xl rounded-md outline-none ring-1 ring-transparent focus:ring-fuchsia-600 hover:ring-blue-500"
+              className="p-2 md:p-3 w-3/4 md:w-2/3 md:text-xl rounded-md outline-none ring-1 ring-transparent focus:ring-fuchsia-600 hover:ring-blue-500"
               name="user_name"
               type="text"
               required
             />
           </div>
-          <div className="bg-transparent my-4 md:my-5 px-2 flex items-center justify-between">
+          <div className="bg-transparent my-5 pl-1 md:px-2 flex items-center justify-between">
             <label
               className="bg-transparent text-lg md:text-xl font-mono font-semibold"
               htmlFor="email"
@@ -98,14 +98,14 @@ function Contact() {
               Email
             </label>
             <input
-              className="p-2 md:p-3 w-2/3 md:text-xl rounded-md outline-none ring-1 ring-transparent focus:ring-fuchsia-600 hover:ring-blue-500"
+              className="p-2 md:p-3 w-3/4 md:w-2/3 md:text-xl rounded-md outline-none ring-1 ring-transparent focus:ring-fuchsia-600 hover:ring-blue-500"
               name="email"
               type="email"
               required
             />
           </div>
 
-          <div className="bg-transparent my-4 md:my-5 px-2 flex justify-between">
+          <div className="bg-transparent my-5 pl-1 md:px-2 flex justify-between">
             <label
               className="bg-transparent text-lg md:text-xl font-mono font-semibold"
               htmlFor="message"
@@ -114,7 +114,7 @@ function Contact() {
             </label>
             <textarea
               name="message"
-              className="p-3 md:h-32 w-2/3 rounded-md outline-none ring-1 ring-transparent focus:ring-fuchsia-600 hover:ring-blue-500"
+              className="p-3 md:h-32 w-3/4 md:w-2/3 rounded-md outline-none ring-1 ring-transparent focus:ring-fuchsia-600 hover:ring-blue-500"
               required
             />
           </div>
@@ -130,7 +130,7 @@ function Contact() {
           </div>
         </form>
 
-        <div className="flex md:flex-col items-center justify-center gap-4 mx-4 w-fit">
+        <div className="flex md:flex-col items-center mx-auto justify-center gap-4 md:mx-4 w-fit">
           <a
             className="w-10 mb-4"
             target="_blank"

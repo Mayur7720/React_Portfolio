@@ -32,9 +32,9 @@ function ImageGallary({ screenShots }) {
   };
 
   return (
-    <div className="relative project-screenshots overflow-hidden bg-transparent shrink-0 h-[26rem] w-[30rem]">
+    <div className="relative project-screenshots  bg-transparent shrink-0 md:h-[26rem] md:w-[30rem]">
       <div
-        className="w-full h-[22rem] bg-transparent cursor-pointer"
+        className="w-full mt-4 md:h-[16rem] bg-red-50 bg-transparent cursor-pointer"
         onClick={togglePreview}
       >
         <img
@@ -44,7 +44,7 @@ function ImageGallary({ screenShots }) {
         />
       </div>
 
-      <div className="screen-shots flex gap-1 mt-2 w-fit bg-gray-950">
+      <div className="screen-shots flex flex-wrap gap-1 mt-2 w-fit bg-transparent bg-gray-950">
         {screenShot.map((el, idx) => (
           <div
             key={idx}

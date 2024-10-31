@@ -36,16 +36,16 @@ function Skills() {
     setHoveredIndex(null);
   };
   return (
-    <section className="px-6 mt-8 mb-8 skills-section">
-      <h2 className="mb-8 text-5xl font-mono font-extrabold">Skills</h2>
+    <section className="px-4 md:px-6 mt-4 md:mt-8 mb-8 skills-section">
+      <h2 className="mb-8 text-4xl md:text-5xl font-mono font-extrabold">Skills</h2>
 
-      <div className="relative  flex flex-col items-center ">
+      <div className="relative items-center flex flex-col ">
         {iconRows.map((row, rowIndex) => (
-          <div key={rowIndex} className=" flex justify-center space-x-10 bg-transparent my-2">
+          <div key={rowIndex} className=" flex justify-center space-x-4 md:space-x-10 bg-transparent my-2">
             {row.map((icon, iconIndex) => (
               <div
                 key={iconIndex}
-                className="relative inline-block  bg-transparent"
+                className="relative inline-block bg-transparent"
                 onMouseEnter={() =>
                   handleMouseIn(icon.iconName, `${rowIndex}-${iconIndex}`)
                 }
