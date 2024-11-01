@@ -11,7 +11,7 @@ import { MdEmail } from "react-icons/md";
 
 function Contact() {
   const [sendNewForm, setSendNewForm] = useState(false);
-  const [error, setError] = useState({ error: "", show: false });
+  const [error, setError] = useState({ error: "", show: false, success: "" });
   const [showEmail, setShowEmail] = useState({
     show: false,
     email: `mayurkondhare7875@gmail.com`,
@@ -20,13 +20,11 @@ function Contact() {
 
   const sendEmail = async (e) => {
     e.preventDefault();
-
     const formData = {
       name: form.current.user_name.value,
       email: form.current.email.value,
       message: form.current.message.value,
     };
-
     try {
       const response = await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -37,12 +35,19 @@ function Contact() {
 
       if (response.status === 200) {
         console.log("Email sent successfully!");
+        setError({
+          error: "",
+          show: true,
+          success: "Email sent successfully!",
+        });
         setSendNewForm(false);
       } else {
         console.error("Failed to send email.");
+        setSendNewForm(false);
         setError({ error: "Failed to send message. Try again!", show: true });
       }
     } catch (error) {
+      setSendNewForm(false);
       console.error("Failed to send email:", error);
       setError({ error: "Failed to send message. Try again!", show: true });
     }
@@ -60,11 +65,21 @@ function Contact() {
       <h1 className="text-3xl md:text-5xl md:px-6 py-4 font-mono font-extrabold">
         Contact
       </h1>
-      {error.show && (
+      {error.success == "" && error.show && (
         <div className="bg-red-400 flex items-center text-slate-950 mb-3 py-1 px-1 rounded font-semibold w-fit z-10 ">
           {error.error}
           <RiCloseFill
             onClick={() => setError({ error: "", show: false })}
+            size={20}
+            className="ml-5 cursor-pointer stroke-black bg-transparent fill-black stroke-2"
+          />
+        </div>
+      )}
+      {error.error == "" && error.show && (
+        <div className="bg-green-500 flex items-center text-slate-950 mb-3 py-1 px-1 rounded font-semibold w-fit z-10 ">
+          {error.success}
+          <RiCloseFill
+            onClick={() => setError({ error: "", show: false, success: "" })}
             size={20}
             className="ml-5 cursor-pointer stroke-black bg-transparent fill-black stroke-2"
           />
@@ -122,7 +137,7 @@ function Contact() {
             <button
               disabled={sendNewForm}
               className={`hover:shadow-black/30 shadow-md shadow-black/80 mt-2 px-3 md:px-4 py-2 md:py-3 rounded-lg font-semibold ${
-                sendNewForm ? "bg-blue-700" : "bg-blue-600 hover:bg-blue-700"
+                sendNewForm ? "bg-blue-800" : "bg-blue-600 hover:bg-blue-700"
               }`}
             >
               {sendNewForm ? " Sending... " : "Submit "}
