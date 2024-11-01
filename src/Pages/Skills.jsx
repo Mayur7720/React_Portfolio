@@ -36,7 +36,7 @@ function Skills() {
     setHoveredIndex(null);
   };
   return (
-    <section className="px-4 md:px-6 mt-4 md:mt-8 mb-8 skills-section">
+    <section className="overflow-y-hidden px-4 md:px-6 mt-4 md:mt-8 mb-10 skills-section">
       <h2 className="mb-8 text-4xl md:text-5xl font-mono font-extrabold">Skills</h2>
 
       <div className="relative items-center flex flex-col ">

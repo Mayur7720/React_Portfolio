@@ -1,11 +1,17 @@
 
-import Headers from "./Pages/Headers";
 import "./App.css";
-import HeroSection from "./Pages/HeroSection";
-import Skills from "./Pages/Skills";
-import Projects from "./Pages/Projects";
-import Contact from "./Pages/Contact";
-import Footer from "./Pages/Footer";
+import { lazy } from "react";
+
+const Headers = lazy(() => import("./Pages/Headers"));
+const HeroSection = lazy(() => import("./Pages/HeroSection"));
+
+const Skills = lazy(() => import("./Pages/Skills"));
+
+const Projects = lazy(() => import("./Pages/Projects"));
+
+const Contact = lazy(() => import("./Pages/Contact"));
+
+const Footer = lazy(() => import("./Pages/Footer"));
 
 function App() {
   return (
@@ -15,7 +21,7 @@ function App() {
       <Skills />
       <Projects />
       <Contact />
-      <Footer/>
+      <Footer />
     </>
   );
 }

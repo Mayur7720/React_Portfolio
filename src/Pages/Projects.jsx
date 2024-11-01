@@ -4,6 +4,7 @@ import { projectDetails } from "../Icons";
 import ImageGallary from "../Components/ImageGallary";
 import Label from "../Components/Label";
 import Button from "../Components/Button";
+import "../Pages/projects.css"
 
 function Projects() {
   const [projectInfo] = useState(projectDetails);
@@ -21,21 +22,23 @@ function Projects() {
       {projectInfo.map((info, idx) => (
         <div
           key={idx}
-          className="z-30 px-2 md:px-6 py-3 my-3 drop-shadow-sm hover:bg-gray-900/60 bg-gray-900/100 border border-transparent hover:border-dashed hover:border-slate-600 transition-all ease duration-200 pb-4 rounded-xl"
-        >
+          className=" z-30 px-2 md:px-6 py-3 my-3 drop-shadow-sm hover:bg-gray-900/60 bg-gray-900/100 border border-transparent hover:border-dashed hover:border-slate-600 transition-all ease duration-200 pb-4 rounded-xl"
+        > 
+          <div className="project-info bg-transparent md:flex items-center gap-4">
+            <div className="bg-transparent project-details font-mono">
               <p className="bg-transparent text-7xl tracking-widest font-extrabold text-emerald-300">
                 0{idx + 1}
               </p>
-          <div className="bg-transparent md:flex items-center gap-4">
-            <div className="bg-transparent project-details font-mono">
               <br />
-              <p className="bg-transparent text-xl md:text-2xl font-serif font-semibold">
+              <p className="project-points bg-transparent text-xl md:text-2xl font-serif font-semibold">
                 {info.title}:
               </p>
               <br />
-              <p className="bg-transparent md:ml-2 md:pr-28 ">{info.description}</p>
+              <p className=" bg-transparent md:ml-2 md:pr-28 ">
+                {info.description}
+              </p>
               <br />
-              <p className="bg-transparent text-xl md:text-2xl font-semibold font-serif">
+              <p className="project-points bg-transparent text-xl md:text-2xl font-semibold font-serif">
                 Framework/Technologies :
               </p>
               <br />
@@ -79,4 +82,3 @@ function Projects() {
 }
 
 export default Projects;
-

@@ -41,7 +41,7 @@
   border: 1px dashed #064e3b;
 }
 
-.grid-net:hover {
-  border-color: #10b981; /* Emerald color */
-  box-shadow: 0 0 15px 5px rgba(16, 185, 129, 4); /* Glow effect */
-}
+/* .grid-net:hover { */
+  /* border-color: #003b28;  */
+  /* box-shadow: 0 0 15px 5px rgba(16, 185, 129, 4); Glow effect */
+/* } */

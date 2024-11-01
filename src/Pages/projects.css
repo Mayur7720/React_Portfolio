@@ -1,4 +1,26 @@
-.project-section{
-    display: grid;
-    grid-template-columns: 2;
+/* .project-info {
+  display: grid;
+  grid-template-columns: 2;
+  display: flex;
+  flex-direction: column;
+} */
+@media (max-width: 768px) {
+
+  .project-info {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+}
+@media (max-width: 1024px) {
+.project-info{
+    font-size: small;
+}
+.project-points{
+    font-size: large;
+}
+.main-image{
+   width: 21rem;
+}
 }

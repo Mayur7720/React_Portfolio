@@ -15,13 +15,17 @@ function Headers() {
 
   return (
     <>
-      <nav className="flex justify-between items-center py-2 md:py-4 px-8 md:px-16 border-b-100 border-b border-slate-800 ">
+      <nav className="flex justify-between mb-1 items-center py-2 md:py-4 px-8 md:px-16 border-b-100 border-b border-slate-800 ">
         <div className="relative">
           <div
+            className="animate-div  absolute inset-0
+             bg-gradient-to-tr from-green-900 via-emerald-950 to-slate-950 rounded-tl-full rounded-br-full "
+          ></div>
+          {/* <div
             className="animate-div absolute inset-0 backdrop-blur-lg 
             bg-gradient-to-tr from-green-800 via-emerald-700   
       to-gray-950 rounded-tl-full rounded-br-full "
-          ></div>
+          ></div> */}
           <div
             className="logo-font bg-gradient-to-tl from-fuchsia-950 via-orange-500
       to-fuchsia-900 rounded-lg relative text-5xl font-bold p-2 "
