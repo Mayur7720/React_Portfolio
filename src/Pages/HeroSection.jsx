@@ -28,10 +28,11 @@ function HeroSection() {
           ></div>
         ))}
       </div>
-      <section className="md:w-full items-center gap-10 sm:flex  justify-around p-4   md:px-16">
-        <div className=" my-2 mx-auto md:my-auto w-[15rem] h-[15rem] md:w-[19rem] md:h-[19rem] rounded-full ">
+      <section className="md:w-full sm:flex gap-6 items-center md:gap-10 p-4 md:px-16">
+        <div className="relative mb-16 my-2 mx-auto md:my-auto w-[15rem] h-[15rem] md:w-[19rem] md:h-[19rem] rounded-full ">
+          <div className=" glow-bolb"></div>
           <img
-            className=" relative w-full h-full object-cover md:object-cover rounded-full "
+            className="animate-border relative w-full h-full object-cover md:object-cover  "
             srcSet={`${person1} 320w,
             ${person2} 480w,
             ${person3} 800w`}
@@ -48,7 +49,7 @@ function HeroSection() {
           </p>
 
           <span className="bg-transparent text-2xl md:text-4xl tracking-wide font-semibold font-serif">
-            My Name is Mayur Kondhare,{" "}
+            My Name is Mayur Kondhare,
           </span>
           <br />
           <div className=" space-y-0 md:tracking-wide bg-transparent">

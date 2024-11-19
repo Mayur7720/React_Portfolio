@@ -1,5 +1,7 @@
 .skills-section {
   width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 .skills {
   width: 100%;
@@ -12,13 +14,6 @@
   margin: 0 auto;
   background-color: transparent;
 }
-/* .responsive-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-  gap: 1rem;
-  align-items: center;
-  background-color: transparent;
-} */
 article.skill-info {
   /* border: dashed 2px white; */
   height: 11rem;
@@ -43,4 +38,152 @@ article.skill-info {
   background-color: transparent;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+.particle {
+  width: 4rem;
+  height: 4rem;
+  top: 5rem;
+  left: 0;
+  background-image: linear-gradient(to right, #874da2 0%, #c43a30 100%);
+  background-size: 200%;
+  position: absolute;
+  animation: animate-particle 50s ease-out infinite;
+  filter: blur(0.7rem);
+  border-radius: 100%;
+}
+@keyframes animate-particle {
+  0%,
+  100% {
+    border-radius: 10% 40% 60% 80%/80% 40% 20% 10%;
+    background-position: 0% 50%;
+    transform: translate(0);
+  }
+  40% {
+    border-radius: 80% 40% 20% 10%/10% 40% 60% 80%;
+    background-position: 50% 100%;
+    transform: translate(50rem) rotate(180deg);
+  }
+  80% {
+    border-radius: 90% 80% 40% 20%/60% 30% 20% 100%;
+    transform: translate(18rem, 30rem);
+  }
+}
+
+.particle-glow {
+  /* background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); */
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+  /* background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%); */
+  width: 20rem;
+  height: 20rem;
+  position: absolute;
+  top: 6rem;
+  border-radius: 100%;
+  filter: blur(9rem);
+  animation: animate-glow ease 10s infinite;
+}
+@keyframes animate-glow {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  80% {
+    /* background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%); */
+    opacity: 0.8;
+  }
+}
+
+.particle-icon {
+  width: 4rem;
+  height: 4rem;
+  top: 4rem;
+  left: 0;
+  background-color: transparent;
+  background-size: 200%;
+  position: absolute;
+  /* animation: animate-particle 10s ease infinite; */
+  animation: animate-particle 50s ease infinite;
+  border-radius: 100%;
+}
+@keyframes animate-icon {
+  0%,
+  100% {
+    border-radius: 10% 40% 60% 80%/80% 40% 20% 10%;
+    background-position: 0% 50%;
+    transform: translate(0);
+  }
+  40% {
+    border-radius: 80% 40% 20% 10%/10% 40% 60% 80%;
+    background-position: 50% 100%;
+    transform: translate(50rem) rotate(180deg);
+  }
+  80% {
+    border-radius: 90% 80% 40% 20%/60% 30% 20% 100%;
+    transform: translate(18rem, 30rem);
+  }
+}
+.particle-javascript {
+  width: 4rem;
+  height: 4rem;
+  top: 4rem;
+  right: 0;
+  background-color: transparent;
+  background-size: 200%;
+  position: absolute;
+  /* animation: animate-particle 10s ease infinite; */
+  animation: animate-javascript 50s ease infinite;
+  border-radius: 100%;
+}
+
+@keyframes animate-javascript {
+  0% {
+    border-radius: 10% 40% 60% 80%/80% 40% 20% 10%;
+
+    transform: translate(0);
+  }
+  40% {
+    border-radius: 80% 40% 20% 10%/10% 40% 60% 80%;
+
+    transform: translate(-50rem) rotate(180deg);
+  }
+  80% {
+    border-radius: 90% 80% 40% 20%/60% 30% 20% 100%;
+    transform: translate(18rem, 50rem);
+  }
+}
+
+.particle2 {
+  background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  border-radius: 100%;
+  filter: blur(0.9rem);
+  animation: move-particle ease 60s infinite;
+}
+
+@keyframes move-particle {
+  0%,
+  100% {
+    opacity: 1;
+    border-radius: 10% 40% 30% 30%;
+    transform: translate(5rem, 2rem);
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0;
+    background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+    border-radius: 60% 50% 20% 60%;
+    transform: translate(60rem, 35rem);
+  }
+  50% {
+    opacity: 1;
+    background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+    border-radius: 60% 50% 20% 60%;
+    transform: translate(60rem, 35rem);
+  }
+
 }

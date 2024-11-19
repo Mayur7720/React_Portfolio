@@ -41,7 +41,75 @@
   border: 1px dashed #064e3b;
 }
 
-/* .grid-net:hover { */
-  /* border-color: #003b28;  */
-  /* box-shadow: 0 0 15px 5px rgba(16, 185, 129, 4); Glow effect */
-/* } */
+.glow-bolb {
+  position: absolute;
+  filter: blur(1rem);
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgb(243, 63, 63),
+    rgb(139, 13, 34),
+    rgb(235, 160, 22)
+  );
+  background-position: 0% 50%;
+  border-radius: 100%;
+  animation: border-animate 20s ease infinite;
+  background-size: 100%;
+}
+@keyframes border-animate {
+  0%,
+  100% {
+    border-radius: 10% 40% 60% 80%/80% 40% 20% 10%;
+    background-image: linear-gradient(
+      to right,
+      rgb(243, 63, 63),
+      rgb(139, 13, 34),
+      rgb(235, 160, 22)
+    );
+    background-position: 0%, 50%;
+    opacity: 0.8;
+  }
+30%{
+  opacity: 0.4;
+}
+  40% {
+    /* transform: rotate(360deg); */
+    background-image: linear-gradient(
+      to right,
+      rgb(243, 63, 63),
+      rgb(139, 13, 34),
+      rgb(233, 160, 25)
+    );
+    border-radius: 80% 40% 20% 10%/10% 40% 60% 80%;
+    opacity: 0.3;
+    background-position: 100%, 50%;
+  }
+  80% {
+    /* transform: rotate(360deg); */
+    background-image: linear-gradient(
+      to right,
+      rgb(243, 63, 63),
+      rgb(139, 13, 34),
+      rgb(233, 160, 25)
+    );
+    border-radius: 90% 80% 40% 20%/60% 30% 20% 100%;
+    background-position: 100%, 50%;
+  }
+}
+.animate-border {
+  border-radius: 100%;
+  animation: animate-borders 20s ease infinite;
+}
+@keyframes animate-borders {
+  0%,
+  100% {
+    border-radius: 10% 40% 60% 80%/80% 40% 20% 10%;
+  }
+  40% {
+    border-radius: 80% 40% 20% 10%/10% 40% 60% 80%;
+  }
+  80% {
+    border-radius: 90% 80% 40% 20%/60% 30% 20% 100%;
+  }
+}

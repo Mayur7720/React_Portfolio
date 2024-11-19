@@ -85,51 +85,67 @@ function Contact() {
           />
         </div>
       )}
-      <div className="mt-3 md:flex">
+      <div className="mt-8 md:flex">
         <form
           ref={form}
           onSubmit={sendEmail}
           className="md:w-3/5 px-2 py-5 mb-4 drop-shadow-md bg-gray-900/60 border border-dashed border-slate-600 transition-all ease duration-200 pb-4 rounded-xl mx-auto"
         >
+          <div className="mx-2 mb-6 flex justify-center gap-6 bg-slate-800/30 p-2 rounded-md items-center">
+            <MdEmail
+              onMouseEnter={handleMouseEnter}
+              className="hover:bg-red-700 bg-red-600 rounded-md py-1 md:py-1"
+              size={36}
+            />
+            <span className="bg-transparent md:text-xl">
+              mayurkondhare7875@gmail.com
+            </span>
+          </div>
           <div className="bg-transparent my-5 pl-1 md:px-2 flex items-center justify-between">
-            <label
+            {/* <label
               className="bg-transparent text-lg md:text-xl font-mono font-semibold"
               htmlFor="user_name"
             >
               Name
-            </label>
+            </label> */}
             <input
-              className="p-2 md:p-3 w-3/4 md:w-2/3 md:text-xl rounded-md outline-none ring-1 ring-transparent focus:ring-fuchsia-600 hover:ring-blue-500"
+              className="p-2 md:p-3 w-full md:text-xl rounded-md outline-none ring-1 ring-transparent focus:ring-fuchsia-600 hover:ring-blue-500"
               name="user_name"
               type="text"
               required
+              placeholder="Name"
+              autoComplete="none"
             />
           </div>
           <div className="bg-transparent my-5 pl-1 md:px-2 flex items-center justify-between">
-            <label
+            {/* <label
               className="bg-transparent text-lg md:text-xl font-mono font-semibold"
               htmlFor="email"
             >
               Email
-            </label>
+            </label> */}
             <input
-              className="p-2 md:p-3 w-3/4 md:w-2/3 md:text-xl rounded-md outline-none ring-1 ring-transparent focus:ring-fuchsia-600 hover:ring-blue-500"
+              placeholder="Email"
+              className="p-2 md:p-3 w-full md:text-xl rounded-md outline-none ring-1 ring-transparent focus:ring-fuchsia-600 hover:ring-blue-500"
               name="email"
-              type="email"
+              type="mail"
               required
+              autoComplete="none"
             />
           </div>
 
           <div className="bg-transparent my-5 pl-1 md:px-2 flex justify-between">
-            <label
+            {/* <label
               className="bg-transparent text-lg md:text-xl font-mono font-semibold"
               htmlFor="message"
             >
               Message
-            </label>
+            </label> */}
             <textarea
               name="message"
-              className="p-3 md:h-32 w-3/4 md:w-2/3 rounded-md outline-none ring-1 ring-transparent focus:ring-fuchsia-600 hover:ring-blue-500"
+              autoComplete="none"
+              placeholder="Message"
+              className="p-3 md:h-32 w-full md:text-xl rounded-md outline-none ring-1 ring-transparent focus:ring-fuchsia-600 hover:ring-blue-500"
               required
             />
           </div>
@@ -179,7 +195,7 @@ function Contact() {
               size={38}
             />
           </a>
-          <a className="w-10 mb-4 relative">
+          {/* <a className="w-10 mb-4 relative">
             <MdEmail
               onMouseEnter={handleMouseEnter}
               className="hover:bg-red-700 bg-red-600 rounded-md w-full md:py-1"
@@ -190,7 +206,7 @@ function Contact() {
                 {showEmail.email}
               </span>
             )}
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
