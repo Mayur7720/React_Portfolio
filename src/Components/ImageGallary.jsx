@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import ReactDOM from "react-dom";
-import "../Pages/projects.css"
+import "../Pages/projects.css";
 function ImageGallary({ screenShots }) {
   const [screenShot] = useState(screenShots.screenShots);
   const [showPreview, setShowPreview] = useState(false);
@@ -15,6 +15,7 @@ function ImageGallary({ screenShots }) {
   };
 
   const renderPreview = () => {
+
     return ReactDOM.createPortal(
       <div
         className="bg-black bg-opacity-80 backdrop-blur-md fixed inset-0 flex items-center justify-center z-50"
@@ -67,4 +68,4 @@ function ImageGallary({ screenShots }) {
   );
 }
 
-export default ImageGallary;
+export default memo(ImageGallary);

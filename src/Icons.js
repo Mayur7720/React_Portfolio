@@ -1,36 +1,36 @@
-import nodejs from "./assets/nodejs.webp";
-import react from "./assets/react.webp";
-import tailwind from "./assets/tailwind2.webp";
-import html from "./assets/html.webp";
-import mongodb from "./assets/mongo.webp";
-import visualCode from "./assets/visualcode.webp";
-import mysql from "./assets/mysql.webp";
-import framer from "./assets/framer.webp";
-import javascript from "./assets/javascript.webp";
-import git from "./assets/git.webp";
-import css from "./assets/css.webp";
-// import redux from "./assets/redux.png"
-// import express from "./assets/express.png"
-// import json from "./assets/json.png"
-// import api from "./assets/api.png"
-// import postman from "./assets/postman.png"
+import nodejs from "../public/nodejs.webp";
+import react from "../public/react.webp";
+import tailwind from "../public/tailwind2.webp";
+import html from "../public/html.webp";
+import mongodb from "../public/mongo.webp";
+import visualCode from "../public/visualcode.webp";
+import mysql from "../public/mysql.webp";
+import framer from "../public/framer.webp";
+import javascript from "../public/javascript.webp";
+import git from "../public/git.webp";
+import css from "../public/css.webp";
+// import redux from "../public/redux.png"
+// import express from "../public/express.png"
+// import json from "../public/json.png"
+// import api from "../public/api.png"
+// import postman from "../public/postman.png"
 
-import screenshot1 from "./assets/screen1.webp";
-import screenshot2 from "./assets/screen2.webp";
-import screenshot3 from "./assets/screen3.webp";
-import ecommerce1 from "./assets/ecommerce1.webp";
-import ecommerce2 from "./assets/ecommerce2.webp";
-import ecommerce3 from "./assets/ecommerce3.webp";
-import ecommerce4 from "./assets/ecommerce4.webp";
-import ecommerce5 from "./assets/ecommerce5.webp";
-import task1 from "./assets/task1.webp";
-import task2 from "./assets/task2.webp";
-import task3 from "./assets/task3.webp";
-import task4 from "./assets/task4.webp";
-import task5 from "./assets/task5.webp";
-import task6 from "./assets/task6.webp";
-import task7 from "./assets/task7.webp";
-import task8 from "./assets/task8.webp";
+import screenshot1 from "../public/screen1.webp";
+import screenshot2 from "../public/screen2.webp";
+import screenshot3 from "../public/screen3.webp";
+import ecommerce1 from "../public/ecommerce1.webp";
+import ecommerce2 from "../public/ecommerce2.webp";
+import ecommerce3 from "../public/ecommerce3.webp";
+import ecommerce4 from "../public/ecommerce4.webp";
+import ecommerce5 from "../public/ecommerce5.webp";
+import task1 from "../public/task1.webp";
+import task2 from "../public/task2.webp";
+import task3 from "../public/task3.webp";
+import task4 from "../public/task4.webp";
+import task5 from "../public/task5.webp";
+import task6 from "../public/task6.webp";
+import task7 from "../public/task7.webp";
+import task8 from "../public/task8.webp";
 
 export const icons = [
   { iconName: "react", url: react, color: "#3b82f6" },

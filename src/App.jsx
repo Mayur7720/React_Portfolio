@@ -8,6 +8,7 @@ const Skills = lazy(() => import("./Pages/Skills"));
 const Projects = lazy(() => import("./Pages/Projects"));
 const Contact = lazy(() => import("./Pages/Contact"));
 const Footer = lazy(() => import("./Pages/Footer"));
+
 function App() {
   return (
     <Router>

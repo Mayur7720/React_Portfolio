@@ -102,12 +102,6 @@ function Contact() {
             </span>
           </div>
           <div className="bg-transparent my-5 pl-1 md:px-2 flex items-center justify-between">
-            {/* <label
-              className="bg-transparent text-lg md:text-xl font-mono font-semibold"
-              htmlFor="user_name"
-            >
-              Name
-            </label> */}
             <input
               className="p-2 md:p-3 w-full md:text-xl rounded-md outline-none ring-1 ring-transparent focus:ring-fuchsia-600 hover:ring-blue-500"
               name="user_name"
@@ -118,12 +112,7 @@ function Contact() {
             />
           </div>
           <div className="bg-transparent my-5 pl-1 md:px-2 flex items-center justify-between">
-            {/* <label
-              className="bg-transparent text-lg md:text-xl font-mono font-semibold"
-              htmlFor="email"
-            >
-              Email
-            </label> */}
+  
             <input
               placeholder="Email"
               className="p-2 md:p-3 w-full md:text-xl rounded-md outline-none ring-1 ring-transparent focus:ring-fuchsia-600 hover:ring-blue-500"
@@ -135,12 +124,6 @@ function Contact() {
           </div>
 
           <div className="bg-transparent my-5 pl-1 md:px-2 flex justify-between">
-            {/* <label
-              className="bg-transparent text-lg md:text-xl font-mono font-semibold"
-              htmlFor="message"
-            >
-              Message
-            </label> */}
             <textarea
               name="message"
               autoComplete="none"

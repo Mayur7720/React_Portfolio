@@ -1,4 +1,4 @@
-import React from "react";
+import React,{memo} from "react";
 
 function Label({ label = "no label", color = " bg-purple-800/60 " }) {
   return (
@@ -10,4 +10,4 @@ function Label({ label = "no label", color = " bg-purple-800/60 " }) {
   );
 }
 
-export default Label;
+export default memo(Label);

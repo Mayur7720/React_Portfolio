@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import "../Pages/HeroSection.css";
-import person1 from "../assets/person1.jpeg";
-import person2 from "../assets/person2.png";
-import person3 from "../assets/person3.png";
+import person1 from "../../public/person1.jpeg";
+import person2 from "../../public/person2.png";
+import person3 from "../../public/person3.png";
 function HeroSection() {
   const grid = { row: 6, col: 12 };
   const cells = Array.from({ length: grid.row * grid.col }, (_, idx) => idx);

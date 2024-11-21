@@ -32,7 +32,7 @@ function Projects() {
               <br />
               <p className="project-points bg-transparent text-xl md:text-2xl font-serif font-semibold">
                 {info.title}:
-              </p>
+              </p> 
               <br />
               <p className=" bg-transparent md:ml-2 md:pr-28 ">
                 {info.description}
