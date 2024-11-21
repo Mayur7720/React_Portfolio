@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { icons } from "../Icons";
 import "../Pages/skills.css";
-import npmIcon from "../../public/npm.png";
-import javascript from "../../public/javascript.webp";
+import npmIcon from "../assets/npm.png";
+import javascript from "../assets/javascript.webp";
 import Tooltip from "../Components/Tooltip";
 
 function Skills() {
