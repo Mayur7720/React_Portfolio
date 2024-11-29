@@ -70,27 +70,27 @@ article.skill-info {
 }
 
 .particle-glow {
-  /* background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%); */
-  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
-  /* background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%); */
-  width: 20rem;
-  height: 20rem;
+  /* background-image: linear-gradient(to right, #4b27ec 0%, #a3008d 100%); */
+  background-image: linear-gradient(to right, #3212bd 0%, #702366 100%);
+  width: 18rem;
+  height: 18rem;
   position: absolute;
-  top: 6rem;
-  border-radius: 100%;
-  filter: blur(9rem);
-  animation: animate-glow ease 10s infinite;
+  top: 8rem;
+  opacity: 0.6;
+  filter: blur(10rem);
+  animation: animate-glow 5s linear infinite;
+  background-size: 200%;
 }
+
 @keyframes animate-glow {
-  0% {
-    opacity: 1;
+  0%,
+  100% {
+    background-size: 0% 50%;
+    opacity: 0.3;
   }
-  40% {
-    opacity: 0.9;
-  }
-  80% {
-    /* background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%); */
-    opacity: 0.8;
+  50% {
+    background-size: 50% 100%;
+    opacity: 0.4;
   }
 }
 
@@ -102,7 +102,6 @@ article.skill-info {
   background-color: transparent;
   background-size: 200%;
   position: absolute;
-  /* animation: animate-particle 10s ease infinite; */
   animation: animate-particle 50s ease infinite;
   border-radius: 100%;
 }
@@ -131,7 +130,6 @@ article.skill-info {
   background-color: transparent;
   background-size: 200%;
   position: absolute;
-  /* animation: animate-particle 10s ease infinite; */
   animation: animate-javascript 50s ease infinite;
   border-radius: 100%;
 }
@@ -139,12 +137,10 @@ article.skill-info {
 @keyframes animate-javascript {
   0% {
     border-radius: 10% 40% 60% 80%/80% 40% 20% 10%;
-
     transform: translate(0);
   }
   40% {
     border-radius: 80% 40% 20% 10%/10% 40% 60% 80%;
-
     transform: translate(-50rem) rotate(180deg);
   }
   80% {
@@ -185,5 +181,40 @@ article.skill-info {
     border-radius: 60% 50% 20% 60%;
     transform: translate(60rem, 35rem);
   }
+}
+.particle3 {
+  background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  border-radius: 100%;
+  filter: blur(0.5rem);
+  opacity: 1;
+  background-size: 200%;
+  animation: move-particle3 ease 60s infinite;
+}
 
+@keyframes move-particle3 {
+  0%,
+  100% {
+    border-radius: 58% 42% 21% 79% / 49% 59% 41% 51%;
+    transform: translate(10rem, 100rem);
+    opacity: 0.5;
+    background-position: 0% 50%;
+  }
+  30% {
+    background-position: 0% 50%;
+    border-radius: 40% 60% 73% 27% / 35% 11% 89% 65%;
+    transform: translate(50rem, -1rem);
+    opacity: 1;
+  }
+  60% {
+    background-position: 50% 100%;
+    border-radius: 47% 53% 28% 72% / 85% 49% 51% 15%;
+    transform: translateX(1rem);
+  }
+  80% {
+    opacity: 0.1;
+    border-radius: 40% 60% 73% 27% / 35% 11% 89% 65%;
+  }
 }

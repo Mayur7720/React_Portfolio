@@ -103,16 +103,5 @@ export const projectDetails = [
       },
     ],
   },
-  // {
-  //   title: "Portfoli",
-  //   description:"Create a portfolio application using react.js and tailwind in this portfolio i have mentioned my technical skills and personal project which i have build. ",
-  //   label: ["React.js", "Tailwindcss"],
-  //   screenShots: [screenshot1, screenshot2, screenshot3],
-  //   link: [
-  //     {
-  //       github_Url: "",
-  //       live_Url: "",
-  //     },
-  //   ],
-  // },
+
 ];

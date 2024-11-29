@@ -39,7 +39,7 @@ function Headers() {
       <div
         className={`${
           openSideBar ? "" : "translate-x-[-100%]"
-         } md:hidden fixed inset-0 bg-gray-950/80 z-10 ease duration-300 backdrop-blur-md`}
+        } md:hidden fixed inset-0 bg-gray-950/80 z-10 ease duration-300 backdrop-blur-md`}
       >
         <div
           onClick={() => {
@@ -50,14 +50,12 @@ function Headers() {
         >
           <FaX size={20} className="absolute right-4 top-4" />
         </div>
-        <ul className={`mt-4 bg-transparent text-lg`}>
-          <br />
-          <br />
-          <li className={`${sidebar}`}>Home</li>
-          <li className={` ${sidebar}`}>About</li>
-          <li className={` ${sidebar}`}>My Projects</li>
-          <li className={` ${sidebar}`}>Contact</li>
-        </ul>
+          <ul className={` bg-transparent text-lg mt-28`}>
+            <li className={`${sidebar}`}>Home</li>
+            <li className={` ${sidebar}`}>About</li>
+            <li className={` ${sidebar}`}>My Projects</li>
+            <li className={` ${sidebar}`}>Contact</li>
+          </ul>
       </div>
     </section>
   );

@@ -12,10 +12,12 @@ function ImageGallary({ screenShots }) {
 
   const togglePreview = () => {
     setShowPreview((prev) => !prev);
+    showPreview
+      ? (document.body.style.overflowY = "auto")
+      : (document.body.style.overflowY = "hidden");
   };
 
   const renderPreview = () => {
-
     return ReactDOM.createPortal(
       <div
         className="bg-black bg-opacity-80 backdrop-blur-md fixed inset-0 flex items-center justify-center z-50"

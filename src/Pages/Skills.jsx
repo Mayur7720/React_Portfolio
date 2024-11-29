@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { icons } from "../Icons";
 import "../Pages/skills.css";
-import npmIcon from "../assets/npm.png";
-import javascript from "../assets/javascript.webp";
 import Tooltip from "../Components/Tooltip";
 
 function Skills() {
@@ -34,12 +32,11 @@ function Skills() {
     setHoveredIndex(null);
   };
   return (
-    <section className="h-screen overflow-y-hidden px-4 md:px-6 mt-4 md:mt-8 mb-10 skills-section">
+    <section className="backdrop-blur-md h-screen overflow-y-hidden px-4 md:px-6 mt-4 md:mt-8 mb-10 skills-section">
       <h2 className=" text-4xl md:text-5xl font-mono font-extrabold">Skills</h2>
       <div className=" particle"></div>
       <div className=" particle2"></div>
-      {/* <img className=" particle-icon" src={npmIcon} />
-      <img className=" particle-javascript" src={javascript} /> */}
+      <div className=" particle3"></div>
       <div className="translate-y-24 md:translate-y-16 bg-transparent">
         <div className="bg-transparent relative items-center flex flex-col ">
           <div className=" particle-glow"></div>

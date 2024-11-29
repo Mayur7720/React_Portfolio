@@ -37,9 +37,9 @@
 .grid-net {
   width: 100%;
   height: 100%;
-  /* border: 1px dashed #ccc; */
   border: 1px dashed #064e3b;
 }
+
 
 .glow-bolb {
   position: absolute;
@@ -86,7 +86,6 @@
     background-position: 100%, 50%;
   }
   80% {
-    /* transform: rotate(360deg); */
     background-image: linear-gradient(
       to right,
       rgb(243, 63, 63),
